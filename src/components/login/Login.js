@@ -5,7 +5,6 @@ import {
   CssBaseline,
   TextField,
   Grid,
-  Link,
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import { Typography, Container, Box } from "@material-ui/core";
@@ -54,7 +53,7 @@ export default function SignIn() {
   const history = useHistory();
   const handleSubmit = async (value) => {
     const { email, password } = value;
-    if (email === "admin@gmail.com" && password === "123456") {
+    if (email === "user@gmail.com" && password === "123456") {
       await localStorage.setItem("isLogin", true);
       history.push("/dashboard");
     }
@@ -68,7 +67,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Admin Login
+          User Login
         </Typography>
         <Formik
           initialValues={{
@@ -123,14 +122,6 @@ export default function SignIn() {
                   Sign In
                 </Button>
               </Box>
-
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2" color="#1769aa">
-                    Forgot password?
-                  </Link>
-                </Grid>
-              </Grid>
             </Form>
           )}
         </Formik>
