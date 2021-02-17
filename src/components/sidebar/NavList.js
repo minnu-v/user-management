@@ -12,9 +12,7 @@ import EventAvailableIcon from "@material-ui/icons/EventAvailable";
 import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
-import PersonAddIcon from "@material-ui/icons/PersonAdd";
-import UpdateIcon from "@material-ui/icons/Update";
-import GroupIcon from "@material-ui/icons/Group";
+import FaceIcon from "@material-ui/icons/Face";
 import DateRangeIcon from "@material-ui/icons/DateRange";
 import { Link } from "react-router-dom";
 import Profile from "components/views/Profile";
@@ -32,11 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NavList() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
   const [leave, setLeave] = React.useState(false);
-  const handleClick = () => {
-    setOpen(!open);
-  };
   const handleClickLeave = () => {
     setLeave(!leave);
   };
@@ -46,40 +40,16 @@ export default function NavList() {
     <List>
      
        <Profile/>
-     
-      <ListItem button onClick={handleClick}>
+       <ListItem button>
         <ListItemIcon>
-          <GroupIcon style={{ color: "blue" }} />
+          <FaceIcon style={{ color: "blue" }} />
         </ListItemIcon>
-        <ListItemText primary="Employee Management"/>
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <PersonAddIcon style={{ color: "orange" }} />
-            </ListItemIcon>
-            <Link
-              to="allinfo"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <ListItemText primary="Add Employee" />
-            </Link>
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <UpdateIcon style={{ color: "green" }} />
-            </ListItemIcon>
-            <Link
-              to="employeelist"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <ListItemText primary="Employee Status" />
-            </Link>
-          </ListItem>
-        </List>
-      </Collapse>
+
+        <Link to="detailView" style={{ textDecoration: "none", color: "black" }}>
+          <ListItemText primary="My Profile" />
+        </Link>
+      </ListItem>      
+      
 
       <ListItem button>
         <ListItemIcon>
