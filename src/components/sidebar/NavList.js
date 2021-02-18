@@ -36,20 +36,16 @@ export default function NavList() {
   };
 
   return (
-  
     <List>
-     
-       <Profile/>
-       <ListItem button>
-        <ListItemIcon>
-          <FaceIcon style={{ color: "blue" }} />
-        </ListItemIcon>
-
-        <Link to="detailView" style={{ textDecoration: "none", color: "black" }}>
+      <Profile />
+      <Link to="detailView" style={{ textDecoration: "none", color: "black" }}>
+        <ListItem button>
+          <ListItemIcon>
+            <FaceIcon style={{ color: "blue" }} />
+          </ListItemIcon>
           <ListItemText primary="My Profile" />
-        </Link>
-      </ListItem>      
-      
+        </ListItem>
+      </Link>
 
       <ListItem button>
         <ListItemIcon>
@@ -67,28 +63,27 @@ export default function NavList() {
       </ListItem>
       <Collapse in={leave} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <SendIcon style={{ color: "blue" }} />
-            </ListItemIcon>
-            <Link
-              to="request"
-              style={{ textDecoration: "none", color: "black" }}
-            >
+          <Link to="request" style={{ textDecoration: "none", color: "black" }}>
+            <ListItem button className={classes.nested}>
+              <ListItemIcon>
+                <SendIcon style={{ color: "blue" }} />
+              </ListItemIcon>
+
               <ListItemText primary="Request" />
-            </Link>
-          </ListItem>
-          <ListItem button className={classes.nested}>
-            <ListItemIcon>
-              <CheckCircleOutlineIcon style={{ color: "green" }} />
-            </ListItemIcon>
-            <Link
-              to="approval"
-              style={{ textDecoration: "none", color: "black" }}
-            >
+            </ListItem>
+          </Link>
+          <Link
+            to="approval"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <ListItem button className={classes.nested}>
+              <ListItemIcon>
+                <CheckCircleOutlineIcon style={{ color: "green" }} />
+              </ListItemIcon>
+
               <ListItemText primary="Approval" />
-            </Link>
-          </ListItem>
+            </ListItem>
+          </Link>
         </List>
       </Collapse>
       <ListItem button>
@@ -97,15 +92,15 @@ export default function NavList() {
         </ListItemIcon>
         <ListItemText primary="Payroll Management" />
       </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <DateRangeIcon style={{ color: "green" }} />
-        </ListItemIcon>
+      <Link to="calender" style={{ textDecoration: "none", color: "black" }}>
+        <ListItem button>
+          <ListItemIcon>
+            <DateRangeIcon style={{ color: "green" }} />
+          </ListItemIcon>
 
-        <Link to="calender" style={{ textDecoration: "none", color: "black" }}>
           <ListItemText primary="Work Calender" />
-        </Link>
-      </ListItem>
+        </ListItem>
+      </Link>
     </List>
   );
 }

@@ -45,12 +45,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "baseline",
-    color: "#79a0d2",
+    color: "#3F51B5",
     marginBottom: theme.spacing(2),
   },
-  // margin: {
-  //   margin: theme.spacing(1),
-  // },
+
 
   submit: {
     margin: theme.spacing(7, 40, 2),
