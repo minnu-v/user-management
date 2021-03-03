@@ -169,6 +169,9 @@ export default function Request() {
                       </MenuItem>
                       <MenuItem value={1}>Sick-Leave</MenuItem>
                       <MenuItem value={2}>Casual-Leave</MenuItem>
+                      <MenuItem value={3}>Marraige-Leave</MenuItem>
+                      <MenuItem value={4}>Maternity-Leave</MenuItem>
+                      <MenuItem value={5}>Paterniy-Leave</MenuItem>
                     </Select>
                   </FormControl>
                 </div>
@@ -191,8 +194,8 @@ export default function Request() {
                       <MenuItem disabled value="">
                         <em> Duration </em>
                       </MenuItem>
-                      <MenuItem value={3}>Full-day</MenuItem>
-                      <MenuItem value={4}>half-day</MenuItem>
+                      <MenuItem value={6}>Full-day</MenuItem>
+                      <MenuItem value={7}>half-day</MenuItem>
                     </Select>
                   </FormControl>
                 </div>

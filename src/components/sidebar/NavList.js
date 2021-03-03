@@ -73,7 +73,7 @@ export default function NavList() {
             </ListItem>
           </Link>
           <Link
-            to="approval"
+            to="leavestatus"
             style={{ textDecoration: "none", color: "black" }}
           >
             <ListItem button className={classes.nested}>
@@ -81,7 +81,7 @@ export default function NavList() {
                 <CheckCircleOutlineIcon style={{ color: "green" }} />
               </ListItemIcon>
 
-              <ListItemText primary="Approval" />
+              <ListItemText primary="Leave Status" />
             </ListItem>
           </Link>
         </List>
