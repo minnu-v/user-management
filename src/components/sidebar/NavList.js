@@ -63,13 +63,13 @@ export default function NavList() {
       </ListItem>
       <Collapse in={leave} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <Link to="request" style={{ textDecoration: "none", color: "black" }}>
+          <Link to="applyLeave" style={{ textDecoration: "none", color: "black" }}>
             <ListItem button className={classes.nested}>
               <ListItemIcon>
                 <SendIcon style={{ color: "blue" }} />
               </ListItemIcon>
 
-              <ListItemText primary="Request" />
+              <ListItemText primary="Apply Leave" />
             </ListItem>
           </Link>
           <Link

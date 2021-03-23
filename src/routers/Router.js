@@ -1,7 +1,7 @@
 import Login from "components/login/Login";
 import Calender from '../components/workCalender/Calender';
 import LeaveStatus from '../components/leaveManagement/LeaveStatus';
-import Request from '../components/leaveManagement/Request';
+import ApplyLeave from '../components/leaveManagement/ApplyLeave';
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
@@ -19,8 +19,8 @@ function AppRouter() {
             <PrivateRoute path="/dashboard">
               <Calender />
             </PrivateRoute>
-            <PrivateRoute path="/request">
-              <Request />
+            <PrivateRoute path="/applyLeave">
+              <ApplyLeave />
             </PrivateRoute>
             <PrivateRoute path="/leavestatus">
               <LeaveStatus />

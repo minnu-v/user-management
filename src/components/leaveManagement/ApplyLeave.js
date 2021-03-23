@@ -69,7 +69,7 @@ const tiers = [
   },
 ];
 
-export default function Request() {
+export default function ApplyLeave() {
   const classes = useStyles();
   const [Leavetype, setLeavetype] = React.useState("");
   const [duration, setduration] = React.useState("");
