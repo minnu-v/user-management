@@ -69,7 +69,7 @@ export default function NavList() {
                 <SendIcon style={{ color: "blue" }} />
               </ListItemIcon>
 
-              <ListItemText primary="Request" />
+              <ListItemText primary="Apply Leave" />
             </ListItem>
           </Link>
           <Link
@@ -81,7 +81,7 @@ export default function NavList() {
                 <CheckCircleOutlineIcon style={{ color: "green" }} />
               </ListItemIcon>
 
-              <ListItemText primary="Approval" />
+              <ListItemText primary="Leave Status" />
             </ListItem>
           </Link>
         </List>
